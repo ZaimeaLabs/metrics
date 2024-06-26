@@ -1,0 +1,36 @@
+<?php
+
+declare(strict_types=1);
+
+namespace ZaimeaLabs\Metrics;
+
+use Illuminate\Support\ServiceProvider;
+
+class MetricsServiceProvider extends ServiceProvider
+{
+    /**
+     * Bootstrap any application services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        $this->loadMigrationsFrom(__DIR__.'/database/migrations');
+
+        $this->publishes([
+            __DIR__.'/config/metric.php' => config_path('metric.php'),
+        ], 'metric');
+    }
+
+    /**
+     * Register any application services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        $this->mergeConfigFrom(
+            __DIR__.'/config/metric.php', 'metric'
+        );
+    }
+}
