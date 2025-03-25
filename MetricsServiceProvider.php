@@ -13,7 +13,7 @@ class MetricsServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         $this->loadMigrationsFrom(__DIR__.'/database/migrations');
 
@@ -27,7 +27,7 @@ class MetricsServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
+    public function register(): void
     {
         $this->mergeConfigFrom(
             __DIR__.'/config/metric.php', 'metric'
