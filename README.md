@@ -1,7 +1,7 @@
 <p align="center"><img src=".github/metrics.svg" alt="Metrics" width="300">
 
 <p align="center">
-    <a href="https://github.com/zaimealabs/metrics/actions"><img src="https://github.com/zaimealabs/pdf/actions/workflows/metrics-tests/badge.svg" alt="Build Status"></a>
+    <a href="https://github.com/zaimealabs/metrics/actions"><img src="https://github.com/zaimealabs/metrics/actions/workflows/metrics-tests/badge.svg" alt="Build Status"></a>
     <a href="https://packagist.org/packages/zaimea/metrics"><img src="https://img.shields.io/packagist/dt/zaimea/metrics" alt="Total Downloads"></a>
     <a href="https://packagist.org/packages/zaimea/metrics"><img src="https://img.shields.io/packagist/v/zaimea/metrics" alt="Latest Stable Version"></a>
     <a href="https://packagist.org/packages/zaimea/metrics"><img src="https://img.shields.io/packagist/l/zaimea/metrics" alt="License"></a>
