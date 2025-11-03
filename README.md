@@ -38,4 +38,4 @@ For issues or suggestions: [GitHub Issues](https://github.com/zaimealabs/metrics
 
 ## License
 
-Ranks is open-sourced software licensed under the [MIT license](LICENSE).
+Metrics is open-sourced software licensed under the [MIT license](LICENSE).
