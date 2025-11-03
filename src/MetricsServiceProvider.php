@@ -19,7 +19,7 @@ class MetricsServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__.'/../config/metric.php' => config_path('metric.php'),
-        ], 'metric');
+        ], 'metrics');
     }
 
     /**
@@ -30,7 +30,7 @@ class MetricsServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../config/metric.php', 'metric'
+            __DIR__.'/../config/metric.php', 'metrics'
         );
     }
 }

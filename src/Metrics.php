@@ -6,7 +6,7 @@ namespace Zaimea\Metrics;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Metric extends Model
+class Metrics extends Model
 {
     protected $table = 'metrics';
 

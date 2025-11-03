@@ -5,16 +5,16 @@ declare(strict_types=1);
 namespace Zaimea\Metrics;
 
 use Illuminate\Database\Eloquent\Relations\MorphMany;
-use Zaimea\Metrics\Metric;
+use Zaimea\Metrics\Metrics;
 
 trait HasMetrics
 {
     public function metrics(): MorphMany
     {
-        return $this->morphMany(Metric::class, 'model');
+        return $this->morphMany(Metrics::class, 'model');
     }
 
-    public function incrementMetric(
+    public function incrementMetrics(
             string $name,
             int $value = 1,
             bool $withDate = true,
@@ -31,7 +31,7 @@ trait HasMetrics
         ], ['value' => 0])->increment('value', $value);
     }
 
-    public function decrementMetric(
+    public function decrementMetrics(
             string $name,
             int $value = 1,
             bool $withDate = true,
