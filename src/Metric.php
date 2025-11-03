@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ZaimeaLabs\Metrics;
+namespace Zaimea\Metrics;
 
 use Illuminate\Database\Eloquent\Model;
 

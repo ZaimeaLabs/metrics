@@ -1,14 +1,10 @@
+<p align="center"><img src=".github/metrics.svg" alt="Metrics" width="300">
+
 <p align="center">
-  <a href="https://zaimea.com/" target="_blank">
-    <img src=".github/metrics.svg" alt="Metrics" width="300">
-  </a>
-</p>
-<p align="center">
-  Metrics for your Model.
-<p>
-<p align="center">
-    <a href="https://github.com/zaimealabs/metrics/actions/workflows/metrics-tests.yml"><img src="https://github.com/zaimealabs/metrics/actions/workflows/metrics-tests.yml/badge.svg" alt="Metrics Tests"></a>
-    <a href="https://github.com/zaimealabs/metrics/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-Mit-brightgreen.svg" alt="License"></a>
+    <a href="https://github.com/zaimealabs/metrics/actions"><img src="https://github.com/zaimealabs/pdf/actions/workflows/metrics-tests/badge.svg" alt="Build Status"></a>
+    <a href="https://packagist.org/packages/zaimea/metrics"><img src="https://img.shields.io/packagist/dt/zaimea/metrics" alt="Total Downloads"></a>
+    <a href="https://packagist.org/packages/zaimea/metrics"><img src="https://img.shields.io/packagist/v/zaimea/metrics" alt="Latest Stable Version"></a>
+    <a href="https://packagist.org/packages/zaimea/metrics"><img src="https://img.shields.io/packagist/l/zaimea/metrics" alt="License"></a>
 </p>
 <div align="center">
   Hey 👋 thanks for considering making a donation, with these donations I can continue working to contribute to ZaimeaLabs projects.
@@ -16,73 +12,30 @@
   [![Donate](https://img.shields.io/badge/Via_PayPal-blue)](https://www.paypal.com/donate/?hosted_button_id=V6YPST5PUAUKS)
 </div>
 
-## Usage
-Set your enums in our config
-```bash
-    php artisan vendor:publish --tag=metric
-```
+## Introduction
 
-Add HasMetrics trait to your model
-```php
-    use ZaimeaLabs\Metrics\HasMetrics;
+``Metrics`` is a lightweight Laravel package that allows you to track, increment, and analyze key actions or events on your models. It supports both configuration-based enums and PHP enums, offers flexible date tracking, and stores metrics in the database for easy reporting and analysis.
 
-    class User extends Authenticable
-    {
-        use HasMetrics;
-    }
-```
+## Official Documentation
 
-Run migrations to create matrics table in your database
-```bash
-    php artisan migrate
-```
+Documentation for Socialite-Extender can be found on the [Zaimea website](https://zaimea.com/docs/metrics).
 
-## With Config enums
-Increment
-```php
-    $user->incrementMetric(config('metric.enums.Logins'), 1);
-```
-Decrement
-```php
-    $user->decrementMetric(config('metric.enums.Logins'), 1);
-```
-Get value
-```php
-    $user->metrics()->where('name', 'logins')->value('value');
-```
+## Contributing
 
-## Or use with Enums
-Create your enum
-```php
-    enum UserMetric: string
-    {
-        case Logins = 'logins';
-    }
-```
+Thank you for considering contributing to Socialite-Extender! The contribution guide can be found in the [Zaimea documentation](https://zaimea.com/docs/open-source/contributions).
 
-Increment
-```php
-    $user->incrementMetric(UserMetric::Logins->value, 1);
-```
-Decrement
-```php
-    $user->decrementMetric(UserMetric::Logins->value, 1);
-```
-Get value
-```php
-    $user->metrics()->where('name', 'logins')->value('value');
-```
+## Code of Conduct
 
-Don't increment/decrement with month,year
-```php
-    $user->incrementMetric(UserMetric::Logins->value, 1, /*withDate*/ false);
+To ensure that the Zaimea open-source ecosystem remains welcoming and respectful, please review and follow our [Code of Conduct](https://zaimea.com/docs/open-source/contributions#code-of-conduct).
 
-    $user->decrementMetric(UserMetric::Logins->value, 1, /*withDate*/ false);
-```
+## Security Vulnerabilities
 
-Increment/decrement with specific month,year
-```php
-    $user->incrementMetric(UserMetric::Logins->value, /*withDate*/ 1, true, /*month*/ 04, /*year*/ 2023, /*day*/ 01);
+Please review [our security policy](https://github.com/zaimealabs/metrics/security/policy) on how to report security vulnerabilities.
 
-    $user->decrementMetric(UserMetric::Logins->value, /*withDate*/ 1, true, /*month*/ 04, /*year*/ 2023, /*day*/ 01);
-```
+## Support
+
+For issues or suggestions: [GitHub Issues](https://github.com/zaimealabs/metrics/issues)
+
+## License
+
+Ranks is open-sourced software licensed under the [MIT license](LICENSE).

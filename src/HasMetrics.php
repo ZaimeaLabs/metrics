@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace ZaimeaLabs\Metrics;
+namespace Zaimea\Metrics;
 
 use Illuminate\Database\Eloquent\Relations\MorphMany;
-use ZaimeaLabs\Metrics\Metric;
+use Zaimea\Metrics\Metric;
 
 trait HasMetrics
 {

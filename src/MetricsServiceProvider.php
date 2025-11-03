@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ZaimeaLabs\Metrics;
+namespace Zaimea\Metrics;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -15,10 +15,10 @@ class MetricsServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $this->loadMigrationsFrom(__DIR__.'/database/migrations');
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
 
         $this->publishes([
-            __DIR__.'/config/metric.php' => config_path('metric.php'),
+            __DIR__.'/../config/metric.php' => config_path('metric.php'),
         ], 'metric');
     }
 
@@ -30,7 +30,7 @@ class MetricsServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->mergeConfigFrom(
-            __DIR__.'/config/metric.php', 'metric'
+            __DIR__.'/../config/metric.php', 'metric'
         );
     }
 }
