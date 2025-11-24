@@ -1,7 +1,10 @@
 ---
 title: How to install Metrics package
 description: How to install Metrics package
-github: https://github.com/zaimealabs/metrics/edit/main/
+github: https://github.com/zaimealabs/metrics/edit/main/docs
+onThisArticle: true
+sidebar: true
+rightbar: true
 ---
 
 # Metrics
